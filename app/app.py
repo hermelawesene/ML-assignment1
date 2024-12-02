@@ -6,7 +6,7 @@ import pandas as pd
 
 # model = joblib.load('/models/regressionmodel.pkl')
 # Define the model path
-model_path = '/models/regressionmodel.pkl'
+model_path = 'models/regressionmodel.pkl'
 
 # Try loading the model
 try:
