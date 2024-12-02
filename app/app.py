@@ -2,9 +2,8 @@ import streamlit as st
 import joblib
 import pandas as pd
 
-
-# Load the trained model
-model = joblib.load("models/linear_regression_model.pkl")
+# Load the trained model 
+model = joblib.load('models/linear_regression_model.pkl')
 
 # Set up the Streamlit interface
 st.title("Car Price Prediction")
