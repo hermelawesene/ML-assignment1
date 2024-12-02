@@ -4,8 +4,16 @@ import pandas as pd
 
 # Load the trained model app
 
-model = joblib.load('/models/regressionmodel.pkl')
+# model = joblib.load('/models/regressionmodel.pkl')
+# Define the model path
+model_path = '/models/regressionmodel.pkl'
 
+# Try loading the model
+try:
+    model = joblib.load(model_path)
+    st.success("Model successfully loaded!")
+except FileNotFoundError:
+    st.error(f"Model not found at {model_path}. Please check the path.")
 
 # Set up the Streamlit interface
 st.title("Car Price Prediction")
