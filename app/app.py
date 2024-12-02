@@ -109,5 +109,5 @@ input_data = pd.DataFrame({
 # Make predictions using the trained model
 predicted_price = model.predict(input_data)
 
-# Display the result
-st.write(f"Predicted Car Price: ${predicted_price[0]:,.2f}")
+# Access the scalar value from the numpy array and format it correctly
+st.write(f"Predicted Car Price: ${predicted_price[0][0]:,.2f}")
