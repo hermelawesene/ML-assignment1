@@ -2,9 +2,9 @@ import streamlit as st
 import joblib
 import pandas as pd
 
-# Load the trained model 
+# Load the trained model app
 
-model = joblib.load('model/linear_regression_model.pkl')
+model = joblib.load('/models/regressionmodel.pkl')
 
 
 # Set up the Streamlit interface
