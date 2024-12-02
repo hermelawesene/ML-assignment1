@@ -3,7 +3,8 @@ import joblib
 import pandas as pd
 
 # Load the trained model
-model = joblib.load('../models/model.pkl')
+#model = joblib.load('../models/model.pkl')
+model = joblib.load('model.pkl')
 
 # Title for the web app
 st.title('Star Classification Prediction')
