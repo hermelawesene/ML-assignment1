@@ -1,11 +1,15 @@
 import streamlit as st
 import joblib
 import pandas as pd
+import os
+import sys
 
 # Load the trained model app
 
 # model = joblib.load('/models/regressionmodel.pkl')
 # Define the model path
+# Append parent directory to sys.path
+sys.path.append(os.path.join(os.path.abspath('..')))
 model_path = 'models/regressionmodel.pkl'
 
 # Try loading the model
