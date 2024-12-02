@@ -3,13 +3,14 @@ import joblib
 import pandas as pd
 
 # Load the trained model 
+"""
 model = joblib.load('model/linear_regression_model.pkl')
 
 
 # Set up the Streamlit interface
 st.title("Car Price Prediction")
 
-st.write("""
+st.write('
 This app predicts the price of a car based on the following features:
 - Levy
 - Model
@@ -20,7 +21,7 @@ This app predicts the price of a car based on the following features:
 - Mileage
 - Cylinders
 - Airbags
-""")
+')
 
 # Create input fields for each feature
 levy = st.number_input("Levy", min_value=0, max_value=10000, step=1)
@@ -56,7 +57,7 @@ predicted_price = model.predict(input_data)
 
 # Access the scalar value from the numpy array and format it correctly
 st.write(f"Predicted Car Price: ${predicted_price[0][0]:,.2f}")
-
+"""
 
 ##########################################################################################################################################
 
