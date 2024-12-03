@@ -19,10 +19,10 @@ modelc = joblib.load('models/model.pkl')
 st.title('Star Classification Prediction')
 
 # Input fields for each feature
-temperature = st.number_input('Temperature (K)', min_value=2000, max_value=40000, value=4500)
-luminosity = st.number_input('Luminosity (L/Lo)', min_value=0.0001, max_value=813000.0, value=0.7)
-radius = st.number_input('Radius (R/Ro)', min_value=0.0084, max_value=1673.0, value=0.85)
-magnitude = st.number_input('Absolute Magnitude (Mv)', min_value=-11.75, max_value=20.0, value=4.7)
+temperature = st.number_input('Temperature (K)', min_value=2000, max_value=40000, value=3134)
+luminosity = st.number_input('Luminosity (L/Lo)', min_value=0.0001, max_value=813000.0, value=0.0004)
+radius = st.number_input('Radius (R/Ro)', min_value=0.0084, max_value=1673.0, value=0.196)
+magnitude = st.number_input('Absolute Magnitude (Mv)', min_value=-11.75, max_value=20.0, value=13.21)
 star_color = st.selectbox('Star Color', ['Red', 'Blue-White', 'White', 'Yellow-White'])
 spectral_class = st.selectbox('Spectral Class', ['A', 'B', 'F', 'G', 'K', 'M', 'O'])
 
