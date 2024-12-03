@@ -70,7 +70,8 @@ if st.button('Predict Star Type'):
 # Define the model path
 # Append parent directory to sys.path
 #sys.path.append(os.path.join(os.path.abspath('.')))
-model_path = 'models/regressionmodel.pkl'
+#model_path = 'models/regressionmodel.pkl'
+model_path = 'models/linear_regression_model.pkl'
 
 # Try loading the model
 try:
