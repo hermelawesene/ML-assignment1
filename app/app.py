@@ -7,7 +7,7 @@ import sys
 
 
 
-model = joblib.load('models/regressionmodel.pkl')
+
 
 # Load the trained model
 #model = joblib.load('../models/model.pkl')
@@ -68,16 +68,15 @@ if st.button('Predict Star Type'):
 # model = joblib.load('/models/regressionmodel.pkl')
 # Define the model path
 # Append parent directory to sys.path
-# sys.path.append(os.path.join(os.path.abspath('.')))
-# model_path = 'models/regressionmodel.pkl'
+#sys.path.append(os.path.join(os.path.abspath('.')))
+model_path = 'models/regressionmodel.pkl'
 
-# # Try loading the model
-# try:
-#     model = joblib.load(model_path)
-#     st.success("Model successfully loaded!")
-# except FileNotFoundError:
-#     st.error(f"Model not found at {model_path}. Please check the path.")
-
+# Try loading the model
+try:
+    model = joblib.load(model_path)
+    st.success("Model successfully loaded!")
+except FileNotFoundError:
+    st.error(f"Model not found at {model_path}. Please check the path.")
 
 # Set up the Streamlit interface
 st.title("Car Price Prediction")
