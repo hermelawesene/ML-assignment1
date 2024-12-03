@@ -75,7 +75,7 @@ model_path = 'models/linear_regression_model.pkl'
 
 # Try loading the model
 try:
-    model = pickle.load(open(model_path, "rb"))
+    model = joblib.load('app/LinearRegression.pkl')
     st.success("Model successfully loaded!")
 except FileNotFoundError:
     st.error(f"Model not found at {model_path}. Please check the path.")
