@@ -1,4 +1,5 @@
 import streamlit as st
+import pickle
 import joblib
 import pandas as pd
 import os
@@ -73,7 +74,7 @@ model_path = 'models/regressionmodel.pkl'
 
 # Try loading the model
 try:
-    model = joblib.load(model_path)
+    model = pickle.load(model_path)
     st.success("Model successfully loaded!")
 except FileNotFoundError:
     st.error(f"Model not found at {model_path}. Please check the path.")
