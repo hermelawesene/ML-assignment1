@@ -13,9 +13,12 @@ import sys
 # Load the trained model
 #model = joblib.load('../models/model.pkl')
 #model = joblib.load('model.pkl')
-modelc = joblib.load('models/model.pkl')
-scaler = joblib.load('models/scaler.pkl') 
-scl = joblib.load('models/scl.pkl') 
+try:
+    modelc = joblib.load('models/model.pkl')
+    scaler = joblib.load('models/scaler.pkl') 
+    scl = joblib.load('models/scl.pkl') 
+except FileNotFoundError:
+    st.error(f"Model not found. Please check the path.")
 # Title for the web app
 st.title('Star Classification Prediction')
 
