@@ -15,8 +15,8 @@ import sys
 #model = joblib.load('model.pkl')
 try:
     modelc = joblib.load('models/model.pkl')
-    scaler = joblib.load('models/scaler.pkl') 
-    scl = joblib.load('models/scl.pkl') 
+    scaler = joblib.load('app/scaler.pkl') 
+    scl = joblib.load('app/scl.pkl') 
 except FileNotFoundError:
     st.error(f"Model not found. Please check the path.")
 # Title for the web app
